@@ -18,11 +18,12 @@ extern Datum pg_getpriority(PG_FUNCTION_ARGS); /* no gcc warn */
 Datum pg_getpriority(PG_FUNCTION_ARGS)
 {
 	int result, lasterr;
+	int pid = PG_GETARG_INT32(0);
   
     lasterr = errno;
     /* reset global error variable */
     errno = 0;
-    result = getpriority(PRIO_PROCESS, 0);
+    result = getpriority(PRIO_PROCESS, pid);
     if (result == -1 && errno != 0) { /* getpriority() can legitimately return the value -1 */
         ereport(ERROR, (errcode(ERRCODE_SYSTEM_ERROR), (errmsg("getpriority() failed: %m"))));
     }
