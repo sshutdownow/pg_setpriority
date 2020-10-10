@@ -18,8 +18,7 @@ extern Datum pg_getpriority(PG_FUNCTION_ARGS); /* no gcc warn */
 Datum pg_getpriority(PG_FUNCTION_ARGS)
 {
 	int result, lasterr;
-    int32 priority = PG_GETARG_INT32(0);
-
+  
     lasterr = errno;
     /* reset global error variable */
     errno = 0;
