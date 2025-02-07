@@ -8,7 +8,7 @@ DATA = pg_setpriority--1.0.sql
 REGRESS = pg_setpriority_test
 
 MODULE_big = pg_setpriority
-OBJS = pg_setpriority.o pg_getpriority.c
+OBJS = pg_setpriority.o pg_getpriority.o
 
 # postgres build stuff
 PG_CONFIG = pg_config
