@@ -5,8 +5,10 @@ Code with minor changes taken from [Chris Kelly blog](https://www.bignerdranch.c
 Download and unpack.
 -----------------------
 
+Compilation.
+------------
 To compile the source code postgresql-devel package is required, to fullfill requirement for RedHat/CentOS do `yum install postgresql-devel`, for Debian/Ubuntu you should install postgresql-server-dev package (`sudo apt-get install postgresql-server-dev`):
-----------
+
 
 Install:
 --------
