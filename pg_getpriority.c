@@ -8,10 +8,10 @@
 #include "postgres.h"
 #include "fmgr.h"
 
-PG_MODULE_MAGIC;
+/* PG_MODULE_MAGIC; */
 
 
-/* PG_FUNCTION_INFO_V1(pg_getpriority); */
+PG_FUNCTION_INFO_V1(pg_getpriority);
 
 extern Datum pg_getpriority(PG_FUNCTION_ARGS); /* no gcc warn */
 
